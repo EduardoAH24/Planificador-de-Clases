@@ -1,1 +1,28 @@
-<p>class-form works!</p>
+<h2>Registrar Clase</h2>
+
+<form [formGroup]="form" (ngSubmit)="registrar()">
+
+  <label>Curso</label>
+  <input type="text" formControlName="curso" />
+  <div *ngIf="form.get('curso')?.touched && form.get('curso')?.invalid">
+    El curso es obligatorio y debe tener mínimo 3 caracteres.
+  </div>
+
+  <label>Tema</label>
+  <input type="text" formControlName="tema" />
+  <div *ngIf="form.get('tema')?.touched && form.get('tema')?.invalid">
+    El tema es obligatorio.
+  </div>
+
+  <label>Fecha</label>
+  <input type="date" formControlName="fecha" />
+
+  <label>Hora Inicio</label>
+  <input type="time" formControlName="hora_inicio" />
+
+  <label>Hora Fin</label>
+  <input type="time" formControlName="hora_fin" />
+
+  <button type="submit">Registrar</button>
+
+</form>

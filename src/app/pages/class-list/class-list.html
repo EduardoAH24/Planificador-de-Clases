@@ -1,1 +1,11 @@
-<p>class-list works!</p>
+<h2>Listado de Clases</h2>
+
+<button routerLink="/clases/nueva">Registrar nueva clase</button>
+
+<div *ngFor="let item of classes" class="card">
+  <h3>{{ item.curso }}</h3>
+  <p>{{ item.tema }}</p>
+  <p>{{ item.fecha }} | {{ item.hora_inicio }} - {{ item.hora_fin }}</p>
+
+  <button (click)="eliminar(item.id)">Eliminar</button>
+</div>

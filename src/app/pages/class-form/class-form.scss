@@ -1,0 +1,19 @@
+form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+input {
+  margin-bottom: 10px;
+}
+
+label {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px;
+}
